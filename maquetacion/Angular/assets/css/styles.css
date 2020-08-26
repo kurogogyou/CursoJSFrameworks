@@ -364,14 +364,14 @@ input[type="text"]:focus, textarea:focus {
 
 /*Desde la anchura 0px hasta la anchura 1489px de pantalla*/
 
-@media (max-width: 1489px){
+@media (max-width: 1508px){
     .center{
         width: 85%;
     }    
 }
 
 /*Otro punto de corte: 0px hasta 960px*/
-@media (max-width: 1314px){
+@media (max-width: 1330px){
     .center{
         width: 95%;
     }
@@ -381,7 +381,7 @@ input[type="text"]:focus, textarea:focus {
     }
 }
 
-@media (max-width: 891px){
+@media (max-width: 931px){
     #logo{
         float: none;
         width: 240px;
@@ -401,5 +401,67 @@ input[type="text"]:focus, textarea:focus {
         margin: 0px;
         padding: 0px;
         line-height: 43px;
+    }
+
+    #content{
+        float: none;
+        width: 100%;
+    }
+    
+    #sidebar{
+        float: none;
+        width: 65%;
+        margin: 0px auto;
+        margin-bottom: 50px;
+    }
+
+    #slider h1{
+        padding-top: 115px;
+        font-size: 25px;
+    }
+
+    .mid-form{
+        width: 70%;
+    }
+}
+
+@media (max-width: 500px){
+    #header{
+        min-height: 130px;
+        overflow: hidden; 
+        /*Lo ideal seria tomar los elementos extra y 
+        crear un boton de menu con ellos. 
+        Esto se haria con Javascript*/
+    }
+
+    #menu,
+    #menu ul{
+        line-height: 50px;
+    }
+
+    #menu ul li{
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+
+    #slider{
+        height: 180px;
+    }
+
+    #slider h1{
+        font-size: 19px;
+        padding-top: 30px;
+    }
+
+    #slider .btn-white{
+        margin-top: 20px;
+    }
+
+    #slider.slider-small{
+        height: 100px;
+    }
+
+    #slider.slider-small h1{
+        padding-top: 35px;
     }
 }
