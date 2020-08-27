@@ -15,7 +15,7 @@ body {
     width: 100%;
     background: white;
     border-bottom: 1px solid #ccc;
-    border-top: 5px solid #61dafb;
+    border-top: 5px solid #09a330;
 }
 
 .center {
@@ -40,16 +40,24 @@ body {
     float: left;
     height: 60px;
     margin-top: -9px;
-    margin-right: -10px;
-    animation: girar infinite 30s linear;
+    margin-right: 3px;
+    animation: latir infinite 5s linear;
 }
 
-@keyframes girar {
-    from {
-        transform: rotate(0deg);
+@keyframes latir {
+    0% {
+        transform: scale(1, 1);
     }
-    to {
-        transform: rotate(360deg);
+    50%{
+        transform: scale(1.02, 1.02);
+    }
+
+    55%{
+        transform: scale(0.95, 0.95);
+    }
+
+    100% {
+        transform: scale(1, 1);
     }
 }
 
@@ -92,7 +100,7 @@ body {
 }
 
 #menu a:hover{
-    color: #3cb2d3;
+    color: #f13e3e;
 }
 
 #slider {
@@ -103,8 +111,8 @@ body {
     text-shadow: 0px 0px 5px #444;
 
     /*DEGRADADO en CSS PURO*/
-    background: rgb(97,218,251);
-    background: radial-gradient(circle, rgba(97,218,251,1) 0%, rgba(0,212,255,1) 42%, rgba(13,176,181,1) 100%);
+    background: rgb(10,164,49);
+    background: linear-gradient(90deg, rgba(10,164,49,1) 0%, rgba(49,222,81,1) 51%, rgba(10,164,49,1) 100%);
 }
 
 #slider h1{
@@ -381,7 +389,7 @@ input[type="text"]:focus, textarea:focus {
     }
 }
 
-@media (max-width: 931px){
+@media (max-width: 947px){
     #logo{
         float: none;
         width: 240px;
