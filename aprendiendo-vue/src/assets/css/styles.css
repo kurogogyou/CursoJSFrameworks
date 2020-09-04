@@ -62,6 +62,37 @@ body {
     }
 }
 
+.alert-danger-provisional{
+    color:red; 
+    font-weight:bold;
+}
+
+.alert-purple-provisional{
+    color:purple; 
+    font-weight:bold;
+}
+
+.alert-success-provisional{
+    color:green; 
+    font-weight:bold;
+}
+
+.yeargreen{
+    background: green !important;
+    color: white !important;
+    padding: 10px !important;
+    width: 68px !important;
+    text-align: center !important;
+}
+
+.yearred{
+    background: red !important;
+    color: white !important;
+    padding: 10px !important;
+    width: 68px !important;
+    text-align: center !important;
+}
+
 #brand {
     display: block;
     margin: 0px;
