@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import Vuelidate from 'vuelidate'
 import VueRouter from 'vue-router'
 import LastArticles from './components/LastArticles';
 import MiComponente from './components/MiComponente.vue'
@@ -12,6 +13,7 @@ import Peliculas from './components/Peliculas.vue';
 Vue.config.productionTip = false
 
 Vue.use(VueRouter);
+Vue.use(Vuelidate);
 
 const routes = [
   {path: '/home', component: LastArticles},
