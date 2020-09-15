@@ -7,7 +7,6 @@
 
         <div id="articles" v-if="articles">
           <Articles :articles="articles"></Articles>
-          <!--Anadir articulos via JS-->
         </div>
       </section>
       <Sidebar></Sidebar>
@@ -36,12 +35,12 @@ export default {
   data() {
     return {
       url: Global.url,
-      articles: [],
+      articles: null,
     };
   },
   methods: {
     getArticles() {
-      axios.get(this.url + "articles/last").then((res) => {
+      axios.get(this.url + "articles").then((res) => {
         if (res.data.status == "success") {
           this.articles = res.data.articles;
           console.log(this.articles);

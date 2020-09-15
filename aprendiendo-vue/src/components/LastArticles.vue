@@ -10,22 +10,7 @@
 
         <!--Listado articulos-->
         <div id="articles">
-          <article class="article-item" id="article-template">
-            <div class="image-wrap">
-              <img
-                src="https://travelandleisure.mx/wp-content/uploads/2018/10/shutterstock_330772199.jpg"
-                alt="Paisaje"
-              />
-            </div>
-
-            <h2>Articulo de prueba</h2>
-            <span class="date">Hace 5 minutos</span>
-            <a href="#">Leer más</a>
-
-            <div class="clearfix"></div>
-          </article>
-
-          <!--AÑADIR ARTICULOS VIA JS-->
+          <Articles :articles="articles"></Articles>
         </div>
       </section>
 
@@ -36,14 +21,37 @@
 </template>
 
 <script>
-import Slider from './Slider';
-import Sidebar from './Sidebar';
+import axios from "axios";
+import Global from '../Global.js';
+import Slider from "./Slider";
+import Sidebar from "./Sidebar";
+import Articles from "./Articles";
 
 export default {
   name: "LastArticles",
   components: {
     Slider,
     Sidebar,
-  }
+    Articles
+  },
+  mounted() {
+    this.getLastArticles();
+  },
+  data() {
+    return {
+      url: Global.url,
+      articles: null,
+    };
+  },
+  methods: {
+    getLastArticles() {
+      axios.get(this.url + "articles/last").then((res) => {
+        if (res.data.status == "success") {
+          this.articles = res.data.articles;
+          console.log(this.articles);
+        }
+      });
+    },
+  },
 };
 </script>
