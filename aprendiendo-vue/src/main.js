@@ -15,6 +15,7 @@ import Peliculas from './components/Peliculas.vue';
 import Search from './components/Search';
 import Redirect from './components/Redirect';
 import Article from './components/Article';
+import CreateArticle from './components/CreateArticle';
 
 Vue.config.productionTip = false
 
@@ -29,6 +30,7 @@ const routes = [
   {path: '/formulario', component: Formulario},
   {path: '/blog', component: Blog},
   {path: '/articulo/:id', name: 'article', component: Article},
+  {path: '/crear-articulo', name: 'create', component: CreateArticle},
   {path: '/pagina/:id?', name: 'pagina', component: Pagina},
   {path: '/ultimos-articulos', component: LastArticles},
   {path: '/buscador/:searchString', component: Search},
